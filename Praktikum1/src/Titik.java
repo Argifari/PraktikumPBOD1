@@ -10,12 +10,22 @@ public class Titik {
 
     double absis;
     double ordinat;
+    static int counterTitik = 0;
     
     // Method
     // Konstruktor untuk membuat titik(0,0)
     Titik() {
         absis = 0;
         ordinat = 0;
+        counterTitik++;
+    }
+    Titik(double x, double y) {
+        absis = x;
+        ordinat = y;
+        counterTitik++;
+    }
+    static int getCounterTitik() {
+        return counterTitik;
     }
 
     // Mengembalikan nilai absis
@@ -45,7 +55,8 @@ public class Titik {
         System.out.println("Titik (" + absis + ", " + ordinat +")");
     }
     // mengembalikan posisi kuadran
-    integer getKuadran() {
+    int getKuadran(){
+
         if (absis >= 0 && ordinat >= 0) {
             return 1;
         }else if (absis < 0 && ordinat > 0) {
@@ -56,5 +67,34 @@ public class Titik {
             return 4;
         }
     }
+    // mengembalikan jarak dari pusat
+    double getJarakPusat() {
+        double jarak = Math.sqrt((absis*absis) + (ordinat*ordinat));
+        return jarak;
+    }
+    double getJarak(Titik T) {
+        double selisihX = T.getAbsis() - absis;
+        double selisihY = T.getOrdinat() - ordinat;
+        double total = Math.sqrt((selisihX*selisihX) + (selisihY*selisihY));
+        return total;
+    }
+    void refleksiX() {
+        ordinat *= -1;
+    }
+    void refleksiY() {
+        absis *= -1;
+    }
+    Titik getRefleksiX() {
+        Titik T = new Titik();
+        T.setAbsis(absis);
+        T.setOrdinat(ordinat*(-1));
+        return T;
+    }
+    Titik getRefleksiY() {
+        Titik T = new Titik();
+        T.setAbsis(absis*(-1));
+        T.setOrdinat(ordinat);
+        return T;
+    }
 
-}// end class Titi
+}// end class Titik
