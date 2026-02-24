@@ -24,29 +24,29 @@ public class Titik {
         ordinat = y;
         counterTitik++;
     }
-    static int getCounterTitik() {
+    public static int getCounterTitik() {
         return counterTitik;
     }
 
     // Mengembalikan nilai absis
-    double getAbsis() {
+    public double getAbsis() {
         return absis;
     }
     // Mengembalikan nilai ordinat
-    double getOrdinat() {
+    public double getOrdinat() {
         return ordinat;
     }
 
     // mengeset absis titik dengan nilai baru x
-    void setAbsis(double x) {
+    public void setAbsis(double x) {
         absis = x;
     }
     // Mengeset ordinat titik dengan nilai baru y
-    void setOrdinat(double y) {
+    public void setOrdinat(double y) {
         ordinat = y;
     }
     // menggeser nilai absis dan ordinat titik masing2 sejauh x dan y
-    void geser(double x, double y) {
+    public void geser(double x, double y) {
         absis = absis + x;
         ordinat = ordinat + y;
     }
@@ -54,8 +54,11 @@ public class Titik {
     void printTitik() {
         System.out.println("Titik (" + absis + ", " + ordinat +")");
     }
+    void printCounterTitik() {
+        System.out.println(this.counterTitik);
+    }
     // mengembalikan posisi kuadran
-    int getKuadran(){
+    public int getKuadran(){
 
         if (absis >= 0 && ordinat >= 0) {
             return 1;
@@ -68,29 +71,29 @@ public class Titik {
         }
     }
     // mengembalikan jarak dari pusat
-    double getJarakPusat() {
-        double jarak = Math.sqrt((absis*absis) + (ordinat*ordinat));
+    public double getJarakPusat() {
+        double jarak = ((absis*absis) + (ordinat*ordinat));
         return jarak;
     }
-    double getJarak(Titik T) {
+    public double getJarak(Titik T) {
         double selisihX = T.getAbsis() - absis;
         double selisihY = T.getOrdinat() - ordinat;
         double total = Math.sqrt((selisihX*selisihX) + (selisihY*selisihY));
         return total;
     }
-    void refleksiX() {
+    public void refleksiX() {
         ordinat *= -1;
     }
-    void refleksiY() {
+    public void refleksiY() {
         absis *= -1;
     }
-    Titik getRefleksiX() {
+    public Titik getRefleksiX() {
         Titik T = new Titik();
         T.setAbsis(absis);
         T.setOrdinat(ordinat*(-1));
         return T;
     }
-    Titik getRefleksiY() {
+    public Titik getRefleksiY() {
         Titik T = new Titik();
         T.setAbsis(absis*(-1));
         T.setOrdinat(ordinat);
