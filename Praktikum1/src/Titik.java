@@ -58,7 +58,7 @@ public class Titik {
         System.out.println(this.counterTitik);
     }
     // mengembalikan posisi kuadran
-    public int getKuadran(){
+    /*public int getKuadran(){
 
         if (absis >= 0 && ordinat >= 0) {
             return 1;
@@ -69,10 +69,11 @@ public class Titik {
         }else if (absis > 0 && ordinat < 0) {
             return 4;
         }
-    }
+    }*/
     // mengembalikan jarak dari pusat
+    
     public double getJarakPusat() {
-        double jarak = ((absis*absis) + (ordinat*ordinat));
+        double jarak = Math.sqrt((absis*absis) + (ordinat*ordinat));
         return jarak;
     }
     public double getJarak(Titik T) {
