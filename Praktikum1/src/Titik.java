@@ -30,11 +30,11 @@ public class Titik {
 
     // Mengembalikan nilai absis
     public double getAbsis() {
-        return absis;
+        return this.absis;
     }
     // Mengembalikan nilai ordinat
     public double getOrdinat() {
-        return ordinat;
+        return this.ordinat;
     }
 
     // mengeset absis titik dengan nilai baru x
@@ -55,12 +55,12 @@ public class Titik {
         System.out.println("Titik (" + absis + ", " + ordinat +")");
     }
     void printCounterTitik() {
-        System.out.println(this.counterTitik);
+        System.out.println(Titik.counterTitik);
     }
     // mengembalikan posisi kuadran
-    /*public int getKuadran(){
+    public int getKuadran(){
 
-        if (absis >= 0 && ordinat >= 0) {
+        if (absis > 0 && ordinat > 0) {
             return 1;
         }else if (absis < 0 && ordinat > 0) {
             return 2;
@@ -68,8 +68,10 @@ public class Titik {
             return 3;
         }else if (absis > 0 && ordinat < 0) {
             return 4;
+        }else {
+            return 0;
         }
-    }*/
+    }
     // mengembalikan jarak dari pusat
     
     public double getJarakPusat() {

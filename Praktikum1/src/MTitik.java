@@ -12,9 +12,17 @@ public class MTitik {
         T1.setAbsis(3); // Set absis jari 3 T1(3,0)
         T1.setOrdinat(4); // Set ordinat jadi 4 T1(3,4)
         T1.printTitik(); // Mencetak Titik T1
-        T1.geser(3,4); // Menggeser titik 
+        T1.geser(3,4); // Menggeser titik
+        System.out.println("Kondisi titik sekarang: ");
         T1.printTitik(); // Mencetak titik T1
+        T2.printTitik();
+        System.out.print("Banyak objek titik: ");
         T1.printCounterTitik();
-        T1.getJarak(T2);
+        int kuadranTitik = T1.getKuadran();
+        System.out.printf("Kuadran Titik T1 : %d\n", kuadranTitik);
+        double jarakPusat = T1.getJarakPusat();
+        System.out.println("Jarak dari pusat pada Titik T1 : "+jarakPusat);
+        double jarakAntarTitik = T1.getJarak(T2);
+        System.out.printf("Jarak T1 dan T2: %.2f\n",jarakAntarTitik);
     }
 }
