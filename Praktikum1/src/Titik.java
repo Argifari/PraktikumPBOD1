@@ -44,5 +44,17 @@ public class Titik {
     void printTitik() {
         System.out.println("Titik (" + absis + ", " + ordinat +")");
     }
+    // mengembalikan posisi kuadran
+    integer getKuadran() {
+        if (absis >= 0 && ordinat >= 0) {
+            return 1;
+        }else if (absis < 0 && ordinat > 0) {
+            return 2;
+        }else if (absis < 0 && ordinat < 0 ) {
+            return 3;
+        }else if (absis > 0 && ordinat < 0) {
+            return 4;
+        }
+    }
 
-}// end class Titik
+}// end class Titi
