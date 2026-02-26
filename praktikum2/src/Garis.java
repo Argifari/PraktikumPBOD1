@@ -15,20 +15,33 @@ public class Garis {
         counterGaris++;
     }
 
-    Titik getTitikAwal() {
+    public Titik getTitikAwal() {
         return titikAwal;
     }
-    Titik getTitikAkhir() {
+    public Titik getTitikAkhir() {
         return titikAkhir;
     }
-    void setTitikAwal(Titik T) {
+    public void setTitikAwal(Titik T) {
         titikAwal = T;
     }
-    void setTitikAkhir(Titik T) {
+    public void setTitikAkhir(Titik T) {
         titikAkhir = T;
     }
     
     static int getCounterGaris() {
         return counterGaris;
     }
+    public double panjangGaris() {
+        double selisihX = titikAkhir.getAbsis() - titikAwal.getAbsis();
+        double selisihY = titikAkhir.getOrdinat() - titikAwal.getOrdinat();
+        double panjang = Math.sqrt(selisihX*selisihX + selisihY*selisihY);
+        return panjang;
+    }
+    public double gradien(){
+        double selisihX = titikAkhir.getAbsis() - titikAwal.getAbsis();
+        double selisihY = titikAkhir.getOrdinat() - titikAwal.getOrdinat();
+        double gradienM = selisihY / selisihX;
+        return gradienM;
+    }
+
 }
