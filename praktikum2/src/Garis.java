@@ -4,12 +4,12 @@ public class Garis {
     private Titik titikAkhir;
     static int counterGaris;
 
-    Garis() {
+    public Garis() {
         titikAwal = new Titik();
         titikAkhir = new Titik(1,1);
         counterGaris++;
     }
-    Garis(Titik T1, Titik T2) {
+    public Garis(Titik T1, Titik T2) {
         titikAwal = T1;
         titikAkhir = T2;
         counterGaris++;
@@ -59,7 +59,7 @@ public class Garis {
         return this.gradien() * G.gradien() == -1;
     }
     public void printGaris() {
-        System.out.printf("Titik Awal = (%0.2f,%0.2f), Titik Akhir = (%0.2f,%0.2f)\n",
+        System.out.printf("Titik Awal = (%.2f,%.2f), Titik Akhir = (%.2f,%.2f)\n",
         titikAwal.getAbsis(),titikAwal.getOrdinat(),titikAkhir.getAbsis(),titikAkhir.getOrdinat() );
     }
 
