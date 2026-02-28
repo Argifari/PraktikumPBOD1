@@ -32,6 +32,22 @@ public class MGaris {
         System.out.print("Persamaan Garis G1 : ");
         G1.showEquation();
 
+        boolean isSejajar = G1.isSejajar(G2);
+        boolean isTegakLurus = G1.isTegakLurus(G2);
+
+        if (isSejajar) {
+            System.out.print("Garis G1 sejajar dengan G2\n");
+        }else {
+
+            System.out.print("Garis G1 tidak sejajar dengan G2\n");
+        }
+
+        if (isTegakLurus) {
+            System.out.print("Garis G1 tegak lurus dengan G2\n");
+        }else {
+
+            System.out.print("Garis G1 tidak tegak lurus dengan G2\n");
+        }
         
 
 
