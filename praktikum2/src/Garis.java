@@ -1,7 +1,7 @@
 public class Garis {
 
-    Titik titikAwal;
-    Titik titikAkhir;
+    private Titik titikAwal;
+    private Titik titikAkhir;
     static int counterGaris;
 
     Garis() {
@@ -43,5 +43,33 @@ public class Garis {
         double gradienM = selisihY / selisihX;
         return gradienM;
     }
+
+    public Titik titikTengah() {
+        double x = (titikAwal.getAbsis() + titikAkhir.getAbsis())/2;
+        double y = (titikAwal.getOrdinat() + titikAkhir.getOrdinat())/2;
+        Titik tengah = new Titik(x,y);
+        return tengah;
+    }
+
+    public boolean isSejajar(Garis G) {
+        return this.gradien() == G.gradien();
+    }
+    
+    public boolean isTegakLurus(Garis G) {
+        return this.gradien() * G.gradien() == -1;
+    }
+    public void printGaris() {
+        System.out.printf("Titik Awal = (%0.2f,%0.2f), Titik Akhir = (%0.2f,%0.2f)\n",
+        titikAwal.getAbsis(),titikAwal.getOrdinat(),titikAkhir.getAbsis(),titikAkhir.getOrdinat() );
+    }
+
+    public void showEquation() {
+        double m = this.gradien();
+        double c = m*(-titikAwal.getAbsis()) + titikAwal.getOrdinat();
+        String equation = "y = " + m + "x + " + c;
+        System.out.println(equation); 
+
+    }
+
 
 }
