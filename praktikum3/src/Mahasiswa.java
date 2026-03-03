@@ -12,16 +12,12 @@ public class Mahasiswa {
     public Mahasiswa() {
     }
 
-    public Mahasiswa(String NIM, String nama, String prodi, ArrayList<MataKuliah> listMatkul, Dosen dosenWali,
-            Kendaraan kendaraan) {
+    public Mahasiswa(String NIM, String nama, String prodi) {
         this.NIM = NIM;
         this.nama = nama;
         this.prodi = prodi;
-        this.listMatkul = listMatkul;
-        this.dosenWali = dosenWali;
-        this.kendaraan = kendaraan;
     }
-    
+
     public String getNIM() {
         return NIM;
     }
@@ -59,4 +55,23 @@ public class Mahasiswa {
     public void setKendaraan(Kendaraan kendaraan) {
         this.kendaraan = kendaraan;
     }
+
+    public void addMatkul(MataKuliah baru) {
+        listMatkul.add(baru);
+    }
+
+    public int getJumlahSks() {
+        int totalSks = 0;
+
+        for (MataKuliah mataKuliah : listMatkul) {
+            totalSks += mataKuliah.getSks();
+        }
+        return totalSks;
+    }
+
+    public int getJumlahMatkul() {
+        return listMatkul.size();
+    }
+
+
 }

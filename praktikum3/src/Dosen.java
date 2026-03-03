@@ -4,14 +4,16 @@ public class Dosen {
     private String nama;
     private String prodi;
 
-    public Dosen() {
-    }
-    
     public Dosen(String NIP, String nama, String prodi) {
         this.NIP = NIP;
         this.nama = nama;
         this.prodi = prodi;
     }
+
+    public Dosen() {
+    }
+
+    
     public String getNIP() {
         return NIP;
     }
