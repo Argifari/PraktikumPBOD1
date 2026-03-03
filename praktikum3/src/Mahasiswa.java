@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+
 public class Mahasiswa {
 
     private String NIM;
@@ -85,9 +86,13 @@ public class Mahasiswa {
         System.out.println("- Nama : " + dosenWali.getNama());
         System.out.println("- NIP : " + dosenWali.getNIP());
         System.out.println("- Prodi : " + dosenWali.getProdi());
-        System.out.println("Kendaraan : ");
-        System.out.println("- Nomor Plat : " + kendaraan.getNoPlat());
-        System.out.println("- Jenis : " + kendaraan.getJenis());
+        if (kendaraan == null) {
+            System.out.println("Tidak punya kendaraan");
+        }else {
+            System.out.println("Kendaraan : ");
+            System.out.println("- Nomor Plat : " + kendaraan.getNoPlat());
+            System.out.println("- Jenis : " + kendaraan.getJenis());
+        }
         System.out.println("List Mata Kuliah : ");
         
         for (MataKuliah mataKuliah : listMatkul) {
