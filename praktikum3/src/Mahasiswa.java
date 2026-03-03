@@ -72,12 +72,22 @@ public class Mahasiswa {
     public int getJumlahMatkul() {
         return listMatkul.size();
     }
-
+    public void printMhs() {
+        System.out.println("NIM : " + NIM);
+        System.out.println("Nama : " + nama);
+        System.out.println("Prodi : " + prodi);
+    }
     public void printDetailMhs() {
         System.out.println("NIM : " + NIM);
         System.out.println("Nama : " + nama);
         System.out.println("Prodi : " + prodi);
-        System.out.println("Dosen Wali : " + dosenWali.getNama());
+        System.out.println("Dosen Wali : ");
+        System.out.println("- Nama : " + dosenWali.getNama());
+        System.out.println("- NIP : " + dosenWali.getNIP());
+        System.out.println("- Prodi : " + dosenWali.getProdi());
+        System.out.println("Kendaraan : ");
+        System.out.println("- Nomor Plat : " + kendaraan.getNoPlat());
+        System.out.println("- Jenis : " + kendaraan.getJenis());
         System.out.println("List Mata Kuliah : ");
         
         for (MataKuliah mataKuliah : listMatkul) {
