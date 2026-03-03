@@ -73,5 +73,18 @@ public class Mahasiswa {
         return listMatkul.size();
     }
 
+    public void printDetailMhs() {
+        System.out.println("NIM : " + NIM);
+        System.out.println("Nama : " + nama);
+        System.out.println("Prodi : " + prodi);
+        System.out.println("Dosen Wali : " + dosenWali.getNama());
+        System.out.println("List Mata Kuliah : ");
+        
+        for (MataKuliah mataKuliah : listMatkul) {
+            System.out.println("- " + mataKuliah.getNama());
+        }
+
+    }
+
 
 }
