@@ -8,18 +8,18 @@ Tanggal : 21 Februari 2026
 
 public class Titik {
 
-    double absis;
-    double ordinat;
-    static int counterTitik = 0;
+    private double absis;
+    private double ordinat;
+    private static int counterTitik = 0;
     
     // Method
     // Konstruktor untuk membuat titik(0,0)
-    Titik() {
+    public Titik() {
         absis = 0;
         ordinat = 0;
         counterTitik++;
     }
-    Titik(double x, double y) {
+    public Titik(double x, double y) {
         absis = x;
         ordinat = y;
         counterTitik++;
@@ -51,10 +51,10 @@ public class Titik {
         ordinat = ordinat + y;
     }
     // print titik 
-    void printTitik() {
+    public void printTitik() {
         System.out.println("Titik (" + absis + ", " + ordinat +")");
     }
-    void printCounterTitik() {
+    public void printCounterTitik() {
         System.out.println(Titik.counterTitik);
     }
     // mengembalikan posisi kuadran

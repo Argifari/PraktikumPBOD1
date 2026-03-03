@@ -2,7 +2,7 @@ public class Garis {
 
     private Titik titikAwal;
     private Titik titikAkhir;
-    static int counterGaris;
+    private static int counterGaris;
 
     public Garis() {
         titikAwal = new Titik();
