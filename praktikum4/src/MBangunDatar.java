@@ -61,6 +61,8 @@ public class MBangunDatar {
         L1.setBorder("dashed");
         L1.setWarna("white");
         L1.setJari(7);
+        System.out.println("\nInformasi lingkaran L2 : ");
+        L2.printInfo();
         
         double panjangJariL1 = L1.getJari();
         double pamjangJariL2 = L2.getJari();
