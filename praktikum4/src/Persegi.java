@@ -16,7 +16,7 @@ public class Persegi extends BangunDatar{
     public void setSisi(double sisi) {
         this.sisi = sisi;
     }
-    public double getLuat() {
+    public double getLuas() {
         return sisi*sisi;
     }
     public double getKeliling() {
