@@ -6,10 +6,11 @@ public class Lingkaran extends BangunDatar {
 
     }
     public Lingkaran(double diameter, String warna, String border) {
+        super(1, warna, border);
         jari = diameter/2;
-        setBorder(border);
-        setWarna(warna);
-        setJumlSisi(1);
+        // setBorder(border);
+        // setWarna(warna);
+        // setJumlSisi(1);
     }
     public double getJari() {
         return jari;

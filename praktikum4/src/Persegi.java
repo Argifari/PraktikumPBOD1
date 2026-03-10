@@ -5,10 +5,11 @@ public class Persegi extends BangunDatar{
 
     }
     Persegi(double sisi, String warna, String border) {
+        super(4,warna,border);
         this.sisi = sisi;
-        setWarna(warna);    
-        setJumlSisi(4);
-        setBorder(border);
+        // setWarna(warna);    
+        // setJumlSisi(4);
+        // setBorder(border);
     }
     public double getSisi() {
         return sisi;
