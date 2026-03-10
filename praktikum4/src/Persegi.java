@@ -1,15 +1,18 @@
 public class Persegi extends BangunDatar{
     private double sisi;
 
-    Persegi() {
+    public Persegi() {
 
     }
-    Persegi(double sisi, String warna, String border) {
+    public Persegi(double sisi, String warna, String border) {
         super(4,warna,border);
         this.sisi = sisi;
         // setWarna(warna);    
         // setJumlSisi(4);
         // setBorder(border);
+        // this.jmlSisi = 4;
+        // this.warna = warna;
+        // this.border = border;
     }
     public double getSisi() {
         return sisi;
@@ -26,4 +29,17 @@ public class Persegi extends BangunDatar{
     public double getDiagona() {
         return sisi*Math.sqrt(2);
     }
+    @Override
+    public void printInfo() {
+        super.printInfo();
+        // System.out.println("Jumlah sisi : " + getJumlSisi());
+        // System.out.println("Warna : "+ getWarna());
+        // System.out.println("Border : " + getBorder());
+        System.out.println("Sisi : " + sisi);
+    }
+    // @Override 
+    // public static void printCounterBangunDatar() {
+    //     super.printCounterBangunDatar();
+    
+    // }
 }

@@ -29,5 +29,14 @@ public class Lingkaran extends BangunDatar {
         return 2*jari;
     }
 
+    @Override
+    public void printInfo() {
+        super.printInfo();
+        // System.out.println("Jumlah sisi : " + getJumlSisi());
+        // System.out.println("Warna : "+ getWarna());
+        // System.out.println("Border : " + getBorder());
+        System.out.println("jari : " + jari);
+    }
+
 
 }
