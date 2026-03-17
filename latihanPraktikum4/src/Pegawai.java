@@ -23,6 +23,37 @@ public abstract class Pegawai {
         this.gajiPokok = gajiPokok;
     }
 
+    public String getNip() {
+        return nip;
+    }
+    public String nama() {
+        return nama;
+    }
+    public LocalDate getTanggalLahir() {
+        return tanggalLahir;
+    }
+    public LocalDate getTmt() {
+        return tmt;
+    }
+    public double getGajiPokok() {
+        return gajiPokok;
+    }
+    public void setNip(String nip) {
+        this.nip = nip;
+    }
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+    public void setTanggalLahir(LocalDate tanggalLahir) {
+        this.tanggalLahir = tanggalLahir;
+    }
+    public void setTmt(LocalDate tmt) {
+        this.tmt = tmt;
+    }
+    public void setGajiPokok(double gajiPokok) {
+        this.gajiPokok = gajiPokok;
+    }
+
     @SuppressWarnings("deprecation")
     protected String formatTanggal(LocalDate date) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("id", "ID"));
