@@ -44,8 +44,8 @@ public class DosenTetap extends Pegawai {
         System.out.println("Jabatan : Dosen Tetap");
         System.out.println("Masa Kerja : " + masaKerja.getYears() + " tahun " + masaKerja.getMonths() + " bulan");
         System.out.println("Tanggal Pensiun : " + formatTanggal(tanggalPensiun));
-        System.out.println("Gaji Pokok : " + gajiPokok);
-        System.out.println("Tunjangan : " + tunjangan);
+        System.out.println("Gaji Pokok : " + formatMataUang(gajiPokok));
+        System.out.println("Tunjangan : " + formatMataUang(tunjangan));
     }
 
     @Override 

@@ -2,6 +2,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+import java.text.NumberFormat;
 
 
 
@@ -58,6 +59,16 @@ public abstract class Pegawai {
     protected String formatTanggal(LocalDate date) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("id", "ID"));
         return date.format((formatter));
+    }
+
+    @SuppressWarnings("deprecation")
+    protected String formatMataUang(double uang) {
+        Locale localeID = new Locale("id","ID");
+        NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
+
+        String hasil = formatRupiah.format(uang);
+
+        return hasil;
     }
 
     public abstract Period getMasaKerja(); 

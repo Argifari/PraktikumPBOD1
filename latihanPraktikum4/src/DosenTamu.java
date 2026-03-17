@@ -59,8 +59,8 @@ public class DosenTamu extends Pegawai {
         System.out.println("Jabatan : Dosen Tamu");
         System.out.println("Masa Kerja : " + masaKerja.getYears() + " tahun " + masaKerja.getMonths() + " bulan");
         System.out.println("Tanggal Akhir Kontrak : " + formatTanggal(tanggalAkhirKontrak));
-        System.out.println("Gaji Pokok : " + gajiPokok);
-        System.out.println("Tunjangan : " + tunjangan);
+        System.out.println("Gaji Pokok : " + formatMataUang(gajiPokok));
+        System.out.println("Tunjangan : " + formatMataUang(tunjangan));
 
 
     }
