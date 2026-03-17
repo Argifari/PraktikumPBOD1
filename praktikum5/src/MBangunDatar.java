@@ -37,6 +37,16 @@ public class MBangunDatar {
         L1.printInfo();
         System.out.println("Luas Lingkaran L1 : " + luasL1);
         System.out.println("Keliling Lingkaran L1 : " + kelilingL1);
+
+        Lingkaran L2 = new Lingkaran(14, "Black", "Dashed");
+
+        System.out.println("Jari - jari Lingkaran L2 : " + L2.getJari());
+        L2.zoomIn();
+        System.out.println("Jari - jari Lingkaran L2 setelah zoom in : " + L2.getJari());
+        L2.zoomOut();
+        System.out.println("Jari - jari Lingkaran L2 setelah zoom out : " + L2.getJari());
+        L2.zoom(30);
+        System.out.println("Jari - jari Lingkaran L2 setelah zoom 30% : " + L2.getJari());
         
     }
 }

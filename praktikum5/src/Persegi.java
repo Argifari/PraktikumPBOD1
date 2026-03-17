@@ -1,3 +1,10 @@
+/*
+Nama file : Persegi.java
+Nama : Muhammad Firdaus Argifari
+NIM : 24060124130107
+Tanggal : 17 Maret 2026
+Deskripsi : Class Anak Persegi
+*/
 
 
 public class Persegi extends BangunDatar implements IResize{
