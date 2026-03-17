@@ -39,8 +39,8 @@ public class DosenTetap extends Pegawai {
         System.out.println("NIP : " + nip);
         System.out.println("NIDN : " + nidn);
         System.out.println("Nama : " + nama);
-        System.out.println("Tanggal Lahir : " + tanggalLahir);
-        System.out.println("TMT : " + tmt);
+        System.out.println("Tanggal Lahir : " + formatTanggal(tanggalLahir));
+        System.out.println("TMT : " + formatTanggal(tmt));
         System.out.println("Jabatan : Dosen Tetap");
         System.out.println("Masa Kerja : " + masaKerja.getYears() + " tahun " + masaKerja.getMonths() + " bulan");
         System.out.println("Tanggal Pensiun : " + formatTanggal(tanggalPensiun));

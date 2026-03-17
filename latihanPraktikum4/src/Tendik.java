@@ -30,11 +30,11 @@ public class Tendik extends Pegawai{
 
         System.out.println("NIP : " + nip);
         System.out.println("Nama : " + nama);
-        System.out.println("Tanggal Lahir : " + tanggalLahir);
-        System.out.println("TMT : " + tmt);
+        System.out.println("Tanggal Lahir : " + formatTanggal(tanggalLahir));
+        System.out.println("TMT : " + formatTanggal(tmt));
         System.out.println("Jabatan : Tenaga Kependidikan");
         System.out.println("Masa Kerja : " + masaKerja.getYears() + " tahun " + masaKerja.getMonths() + " bulan");
-        System.out.println("Tanggal Pensiun : " + tanggalPensiun);
+        System.out.println("Tanggal Pensiun : " + formatTanggal(tanggalPensiun));
         System.out.println("Gaji Pokok : " + gajiPokok);
         System.out.println("Tunjangan : " + tunjangan);
     }

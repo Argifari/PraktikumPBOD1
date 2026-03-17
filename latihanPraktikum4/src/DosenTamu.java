@@ -54,11 +54,11 @@ public class DosenTamu extends Pegawai {
         System.out.println("NIP : " + nip);
         System.out.println("NIDK : " + nidk);
         System.out.println("Nama : " + nama);
-        System.out.println("Tanggal Lahir : " + tanggalLahir);
-        System.out.println("TMT : " + tmt);
+        System.out.println("Tanggal Lahir : " + formatTanggal(tanggalLahir));
+        System.out.println("TMT : " + formatTanggal(tmt));
         System.out.println("Jabatan : Dosen Tamu");
         System.out.println("Masa Kerja : " + masaKerja.getYears() + " tahun " + masaKerja.getMonths() + " bulan");
-        System.out.println("Tanggal Akhir Kontrak : " + tanggalAkhirKontrak);
+        System.out.println("Tanggal Akhir Kontrak : " + formatTanggal(tanggalAkhirKontrak));
         System.out.println("Gaji Pokok : " + gajiPokok);
         System.out.println("Tunjangan : " + tunjangan);
 
