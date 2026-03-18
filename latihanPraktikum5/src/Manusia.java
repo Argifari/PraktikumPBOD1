@@ -5,10 +5,6 @@ NIM : 24060124130107
 Tanggal : 18 Maret 2026
 Deskripsi : parent abstract class Manusia
 */
-
-
-
-
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -64,16 +60,16 @@ public abstract class Manusia {
 
     @SuppressWarnings("deprecation")
     public void cetakInfo() {
-        String tab = "\t".repeat(4);
+
         Locale localeID = new Locale("id","ID");
         NumberFormat formatter = NumberFormat.getCurrencyInstance(localeID);
         String formatRupiah = formatter.format(pendapatan);
         DateTimeFormatter formatDate = DateTimeFormatter.ofPattern("dd MMMM yyyy");
         String formatTanggal = formatDate.format(tgl_mulai_kerja);
-        System.out.println("Nama" + tab +": " + nama);
-        System.out.println("Tanggal Mulai Kerja" + tab +": " + formatTanggal);
-        System.out.println("Alamat" + tab +": " + alamat);
-        System.out.println("Pendapatan" + tab +": " + formatRupiah);
+        System.out.println("Nama                 : " + nama);
+        System.out.println("Tanggal Mulai Kerja  : " + formatTanggal);
+        System.out.println("Alamat               : " + alamat);
+        System.out.println("Pendapatan           : " + formatRupiah);
     }
 
 

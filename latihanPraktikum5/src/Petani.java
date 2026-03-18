@@ -37,8 +37,7 @@ public class Petani extends Manusia implements Pajak{
     @Override
     public void cetakInfo() {
         super.cetakInfo();
-        String tab = "\t".repeat(4);
-        System.out.println("Asal Kota" + tab + " : " + asal_kota);
+        System.out.println("Asal Kota            : " + asal_kota);
     }
     //asumsi masa kerja dalam tahun
     @Override

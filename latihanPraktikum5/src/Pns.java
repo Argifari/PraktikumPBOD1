@@ -10,15 +10,15 @@ Deskripsi : child class Pns
 import java.time.LocalDate;
 import java.time.Period;
 
-public class Pns extends Manusia implements Pajak{ 
+public class PNS extends Manusia implements Pajak{ 
 
     private String nip;
     private static int counterPNS;
 
-    public Pns() {
+    public PNS() {
         counterPNS++;
     }
-    public Pns(String nama, LocalDate tgl_mulai_kerja, String alamat, double pendapatan, String nip) {
+    public PNS(String nama, LocalDate tgl_mulai_kerja, String alamat, double pendapatan, String nip) {
         super(nama, tgl_mulai_kerja, alamat, pendapatan);
         this.nip = nip;
         counterPNS++;
@@ -26,7 +26,7 @@ public class Pns extends Manusia implements Pajak{
     public String getNip() {
         return nip;
     }
-    public static int getCounterPns() {
+    public static int getCounterPNS() {
         return counterPNS;
     }
     public void setNip(String x) {
@@ -35,8 +35,7 @@ public class Pns extends Manusia implements Pajak{
     @Override
     public void cetakInfo() {
         super.cetakInfo();
-        String tab = "\t".repeat(4);
-        System.out.println("NIP" + tab + " : " + nip);
+        System.out.println("NIP                  : " + nip);
     }
 
     //asumsi masa kerja dalam tahun

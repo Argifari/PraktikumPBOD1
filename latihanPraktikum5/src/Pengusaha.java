@@ -37,8 +37,7 @@ public class Pengusaha extends Manusia implements Pajak{
     @Override
     public void cetakInfo() {
         super.cetakInfo();
-        String tab = "\t".repeat(4);
-        System.out.println("NPWP" + tab + " : " + npwp);
+        System.out.println("NPWP                 : " + npwp);
     }
 
     //asumsi masa kerja dalam tahun
