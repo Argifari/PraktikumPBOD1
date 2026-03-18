@@ -1,3 +1,11 @@
+/*
+Nama file : Lingkaran.java
+Nama : Muhammad Firdaus Argifari
+NIM : 24060124130107
+Tanggal : 17 Maret 2026
+Deskripsi : interface IResize
+*/
+
 
 public interface IResize {
 
