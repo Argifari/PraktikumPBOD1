@@ -58,6 +58,6 @@ public abstract class BangunDatar {
     }
 
     public boolean isEqualLuas(BangunDatar x) {
-        return this.getLuas() == this.getKeliling();
+        return this.getLuas() == x.getLuas();
     }
 }

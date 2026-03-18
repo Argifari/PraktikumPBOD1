@@ -11,6 +11,41 @@ Deskripsi : Main driver Bangun Datar
 
 public class MBangunDatar {
 
+    /*
+    Bagian 1 : 
+    3. Adakah kode yang bermasalah pada saat dijalankan? 
+    Ada saat pembuatan objek BangunDatar yang mengalami error karena class BangunDatar
+    berupa abstract class yang memiliki abstract method yang belum memiliki implementasi
+    dan abstract class tidak dapat membuat objek langsung, tetapi objek dapat dibuat dari
+    class anaknya
+    
+    5. Apakah method yang dibuat pada langkah nomor 4 dapat digunakan untuk membandingkan objek bangun datar yang berbeda?
+    Method yang dibuat nomor 4 dapat digunakan oleh objek bangun datar lain karena 
+    paramater method tersebut adalah BangunDatar yang merupakan parent class dari Persegi dan Lingkaran
+
+    5. ika BangunDatar tidak dijadikan sebagai abstract class, dapatkah Anda membuat method isEqualLuas() dan isEqualKeliling pada class BangunDatar? Mengapa? 
+    tetap dapat membuat method tersebut karena abstract class tidak membatasi dalam membuat method biasa
+    , tetapi hanya memiliki keharusan untuk adanya abstract method
+
+    5. Apakah kelebihan saat class BangunDatar dijadikan sebagai abstract class daripada non-abstract class?
+    Kelebihan : saat class BangunDatar dibuat abstract class, child classnya memiliki keharusan untuk mengimplementasi
+    abstract method sesuai dengan kebutuhannya, tanpa harus diimplementasikan pada parent class
+    Kekurangan : abstract class tidak dapat membuat objek secara langsung sehingga harus
+    dibuat melalui child classnya yaitu Persegi dan Lingkaran.
+
+    Bagian 2 : 
+    4. Lakukan eksperimen pemanggilan method yang telah dibuat dari IResize pada main method. Bagaimana hasilnya?
+    Hasilnya adalah size mereka mengalami pertambahan dan pengurangan seperti pada Lingkaran, yaitu jari - jari
+    , sedangkan Persegi, yaitu sisi.
+
+    Apakah keuntungan saat method zoomIn(), zoomOut(), dan zoom() dikemas dalam interface IResize dibanding dijadikan sebagai abstract method dalam class BangunDatar? 
+    Keuntungan : interface dapat digunakan oleh semua class, sedangkan jika dibuat abstract class
+    , class lain harus dibuat sebagai anaknya untuk dapat memuat methodnya dan setiap anak harus mengimplementasikannya.
+    Interface juga memusatkan method tanpa ada atribut. Jadi, inteface membuat kita bebas ingin memberikan method ke class apapun
+    
+
+    */
+
     public static void main(String[] args) {
 
         // BangunDatar B1 = new BangunDatar();
@@ -47,6 +82,14 @@ public class MBangunDatar {
         System.out.println("Jari - jari Lingkaran L2 setelah zoom out : " + L2.getJari());
         L2.zoom(30);
         System.out.println("Jari - jari Lingkaran L2 setelah zoom 30% : " + L2.getJari());
+
+        boolean isEqual = L2.isEqualLuas(P1);
+
+        String hasilEqual = (isEqual) ? "Luas Lingkaran L2 sama dengan Luas Persegi P1" : "Luas Lingkaran L2 tidak sama dengan luas Persegi P1";
+
+        System.out.println("\n" +hasilEqual);
+
+
         
     }
 }
