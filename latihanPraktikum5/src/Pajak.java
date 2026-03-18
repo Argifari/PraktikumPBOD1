@@ -1,2 +1,5 @@
+public interface Pajak {
 
-Pns.java
+    public double hitungPajak();
+    
+} 
