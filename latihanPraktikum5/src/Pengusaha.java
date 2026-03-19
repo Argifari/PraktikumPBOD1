@@ -49,7 +49,7 @@ public class Pengusaha extends Manusia implements Pajak{
     }
     @Override
     public double hitungPajak() {
-        double pajak = (15/100)*pendapatan;
+        double pajak = 0.15*pendapatan;
         return pajak;
     }
 

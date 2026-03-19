@@ -23,6 +23,13 @@ public class PNS extends Manusia implements Pajak{
         this.nip = nip;
         counterPNS++;
     }
+    public PNS(String nama, LocalDate tgl_mulai_kerja, double pendapatan, String nip) {
+        this.nama = nama;
+        this.tgl_mulai_kerja = tgl_mulai_kerja;
+        this.pendapatan = pendapatan;
+        this.nip = nip;
+        counterPNS++;
+    }
     public String getNip() {
         return nip;
     }
@@ -48,7 +55,7 @@ public class PNS extends Manusia implements Pajak{
 
     @Override
     public double hitungPajak() {
-        double pajak = (10/100)*pendapatan;
+        double pajak = 0.10*pendapatan;
         return pajak;
     }
 
