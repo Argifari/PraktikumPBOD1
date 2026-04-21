@@ -10,8 +10,8 @@ public class Main {
             System.out.println("Event Baru Dibuat: " + konserTulus.getName());
 
     
-            Ticket v1 = new VIPTicket("VIP-A1", 1000000);
-            Ticket r1 = new RegularTicket("REG-B1", 500000);
+            Ticket v1 = new VIPTicket("VIP-A1", 100000000);
+            Ticket r1 = new RegularTicket("REG-B1", 50000000);
             konserTulus.addTicketToEvent(v1);
             konserTulus.addTicketToEvent(r1);
 
