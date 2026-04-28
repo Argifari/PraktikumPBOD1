@@ -32,6 +32,16 @@ public class Main {
         Kucing kucingA;
         Anjing anjingA;
         Burung burungA;
+
+        Dosen rashid;
+        Dosen budi;
+        Mahasiswa m1;
+        Mahasiswa m2;
+        Mahasiswa m3;
+        Mahasiswa m4;
+        Mahasiswa m5;
+        Seminar infor;
+
         // Algoritma
         System.out.println("\nI. POLIMORFISME AD HOC COERSION");
         System.out.println("\na.");
@@ -181,6 +191,41 @@ public class Main {
         burungA.Bersuara();
         System.out.println();
 
-        
+        System.out.println("\n4.");
+        System.out.println("========================================");
+
+        budi = new Dosen("Budi Aji", "5894151494");
+        rashid = new Dosen("Rashid Buud", "646545648748");
+
+        m1 = new Mahasiswa("1221421412", "Argifari", rashid);
+        m2 = new Mahasiswa("54859516", "Jeje", budi);
+        m3 = new Mahasiswa("99889992", "Hajii", budi);
+        m4 = new Mahasiswa("2315456456", "Kiloo", rashid);
+        m5 = new Mahasiswa("1652519684", "Lolo");
+
+        m5.setWali(rashid);
+        System.out.println("\nInfo mahasiswa : ");
+        m5.tampilDataMahasiswa();
+
+        infor = new Seminar();
+
+        infor.registrasi(budi);
+        infor.registrasi(rashid);
+        infor.registrasi(m1);
+        infor.registrasi(m2);
+        infor.registrasi(m3);
+        infor.registrasi(m4);
+        infor.registrasi(m5);
+
+        System.out.println("\nTotal Peserta : " + infor.countPeserta());
+        infor.tampilPeserta();
+
+        System.out.println("\nJumlah Mahasiswa : " + infor.countMahasiswa());
+
+
+
+
+
+
     }
 }

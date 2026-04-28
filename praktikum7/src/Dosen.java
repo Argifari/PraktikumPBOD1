@@ -1,7 +1,13 @@
-public class Dosen {
+public class Dosen extends Civitasakademika {
     private String nip;
 
     Dosen(String nama, String nip) {
-        super();
+        super(nama);
     }
+    @Override
+    String getNomor() {
+        return nip;
+    }
+
+    
 }

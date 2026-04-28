@@ -1,30 +1,36 @@
 
-public class Mahasiswa {
+public class Mahasiswa extends Civitasakademika{
 
     private String nim;
-    private String nama;
     private String programStudi;
+    private Dosen dosenWali;
 
     Mahasiswa() {
         this.nim = "-999";
-        this.nama = "n/a";
+        super("n/a");
         this.programStudi = "n/a";
     }
 
     Mahasiswa(String nim, String nama) {
         this.nim = nim;
-        this.nama = nama;
+        super(nama);
+    }
+    Mahasiswa(String nim, String nama, Dosen dosenWali) {
+        this.nim = nim;
+        super(nama);
+        this.dosenWali = dosenWali;
     }
 
     Mahasiswa(String nim, String nama, String programStudi) {
         this.nim = nim;
-        this.nama = nama;
         this.programStudi = programStudi;
+        super(nama);
+
     }
 
     Mahasiswa(Mahasiswa x) {
         this.nim = x.getNim();
-        this.nama = x.getNama();
+        super(x.getNama());
         this.programStudi = x.getProgramStudi();
     }
 
@@ -48,10 +54,26 @@ public class Mahasiswa {
         programStudi = x.getProgramStudi();
     }
 
+    void setWali(Dosen dosen) {
+        this.dosenWali = dosen;
+    }
+
     void printInfo() {
         System.out.println("Nama : " + nama);
         System.out.println("NIM : " + nim);
         System.out.println("Program Studi : " + programStudi);
     }
-    
+    void tampilDataMahasiswa() {
+        System.out.println("Nama : " + nama);
+        System.out.println("NIM : " + nim);
+        System.out.println("Dosen Wali : " + dosenWali);
+    }
+    @Override
+    String getNomor() {
+        return nim;
+    }
+
+
+
+
 }

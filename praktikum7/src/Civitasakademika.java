@@ -1,5 +1,5 @@
 abstract class Civitasakademika {
-    private String nama;
+    protected String nama;
 
     Civitasakademika(String nama) {
         this.nama = nama;
@@ -8,6 +8,12 @@ abstract class Civitasakademika {
     String getNama() {
         return nama;
     }
+
+    void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    
 
     abstract String getNomor(); 
 }
