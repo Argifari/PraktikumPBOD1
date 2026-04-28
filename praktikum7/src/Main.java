@@ -28,6 +28,10 @@ public class Main {
         String T;
 
         Mahasiswa mhs,x,mhsKosong,x3,klon;
+
+        Kucing kucingA;
+        Anjing anjingA;
+        Burung burungA;
         // Algoritma
         System.out.println("\nI. POLIMORFISME AD HOC COERSION");
         System.out.println("\na.");
@@ -151,6 +155,15 @@ public class Main {
         
         System.out.println("\nInfo Mahasiswa klon : ");
         klon.printInfo();
+
+
+        System.out.println("\nIII. POLIMORFISME UNIVERSAL INCLUSION");
+        
+        System.out.println("\n3.");
+        System.out.println("========================================");
+
+
+
         
     }
 }
