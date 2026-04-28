@@ -1,15 +1,17 @@
-public class Kucing extends Anabul{
+class Kucing extends Anabul{
     
     Kucing(String nama) {
         super(nama);
     }
 
     @Override
-    void Gerak() {
+    public void Gerak() {
         System.out.println("Bergerak dengan melata");
     }
     @Override
-    void Bersuara() {
+    public void Bersuara() {
         System.out.println("Meong");
     }
+
+
 }

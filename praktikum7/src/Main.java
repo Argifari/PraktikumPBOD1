@@ -162,7 +162,24 @@ public class Main {
         System.out.println("\n3.");
         System.out.println("========================================");
 
+        kucingA = new Kucing("Momoka");
+        anjingA = new Anjing("Heta");
+        burungA = new Burung("Jena");
 
+        System.out.println("Kucing : " + kucingA.getNama());
+        kucingA.Gerak();
+        kucingA.Bersuara();
+        System.out.println();
+        
+        System.out.println("Anjing : " + anjingA.getNama());
+        anjingA.Gerak();
+        anjingA.Bersuara();
+        System.out.println();
+        
+        System.out.println("Burung : " + burungA.getNama());
+        burungA.Gerak();
+        burungA.Bersuara();
+        System.out.println();
 
         
     }

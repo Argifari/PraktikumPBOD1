@@ -1,4 +1,4 @@
-public abstract class Anabul {
+abstract class Anabul {
     private String nama;
 
     Anabul(String nama) {

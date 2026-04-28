@@ -1,14 +1,14 @@
-public class Anjing extends Anabul {
+class Anjing extends Anabul {
     Anjing(String nama) {
         super(nama);
     }
 
     @Override
-    void Gerak() {
+    public void Gerak() {
         System.out.println("Bergerak dengan melata");
     }
     @Override
-    void Bersuara() {
+    public void Bersuara() {
         System.out.println("Guk-guk");
     }
 }

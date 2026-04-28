@@ -1,4 +1,4 @@
-public abstract class Civitasakademika {
+abstract class Civitasakademika {
     private String nama;
 
     Civitasakademika(String nama) {
