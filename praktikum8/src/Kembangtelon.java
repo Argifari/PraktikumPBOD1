@@ -1,0 +1,3 @@
+class Kembangtelon extends Kucing{
+    
+}

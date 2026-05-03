@@ -1,0 +1,3 @@
+class Anggora extends Kucing{
+    
+}

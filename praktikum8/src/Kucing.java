@@ -1,4 +1,5 @@
 class Kucing extends Anabul{
+    private double bobot;
     
     Kucing(String nama) {
         super(nama);
