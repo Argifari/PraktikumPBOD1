@@ -1,6 +1,10 @@
 class Datum<G> {
     private G isi;
 
+    Datum() {
+        
+    }
+
     G getIsi() {
         return isi;
     }
@@ -8,4 +12,5 @@ class Datum<G> {
     void setIsi(G x) {
         isi = x;
     }
+
 }
