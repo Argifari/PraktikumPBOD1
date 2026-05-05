@@ -71,5 +71,22 @@ class Teman<G> {
         }
     }
 
+    int countNama(String nama) {
+        int count = 0;
+        for (String x : Lnama) {
+            if (x.equals(nama)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    void showTeman() {
+        System.out.println("List teman : ");
+        for (String x : Lnama) {
+            System.out.println(x);
+        }
+    }
+
 
 }
