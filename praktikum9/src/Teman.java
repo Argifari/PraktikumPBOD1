@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Teman<G> {
+class Teman {
     private int nbElm;
     private List<String> Lnama;
 
